@@ -54,13 +54,7 @@ class Dpspider(object):
                 data["source"] = "房天下"  # 来源
                 user_name = i.find_element_by_xpath("./div[2]/div[1]").text
                 data["userNick"] = user_name  # 用户名
-                # try:
-                #     data["title"] = i.find_element_by_xpath('.housetype//div[@class="comm_list_score"]').text
-                # except Exception as e:
-                #     data["title"] = "None"
-                # data["title"] = i.find_element_by_xpath('.//div[2]/div[2]/div[2]').text
-                # data["content"] = i.find_element_by_xpath(
-                #     './/a//p | //p[@id="dp_content_5"] | //p[@id="dp_content_12"]').text
+             
                 try:
                     data["content"] = i.find_element_by_xpath('.//a//p').text  # 评论内容
                 except Exception as e:
