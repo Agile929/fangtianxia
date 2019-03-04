@@ -12,13 +12,7 @@ class Dpspider(object):
         self.driver = webdriver.Chrome()
         self.num = 1
         self.base_urls = "https://nanjing.newhouse.fang.com/house/s//b9{}/".format(self.num)
-        # self.base_urls = "https://zz.newhouse.fang.com/house/s/b9{}/".format(self.num)
-        # self.base_urls = "https://xm.newhouse.fang.com/house/s/b9{}/".format(self.num)
-        # self.base_urls = "https://tj.newhouse.fang.com/house/s/b9{}/".format(self.num)
-        # self.base_urls = "http://heyuan.newhouse.fang.com/house/s/b9{}".format(self.num)
-        # self.base_urls = "http://meizhou.newhouse.fang.com/house/s/b9{}".format(self.num)
-        # self.base_urls = "http://jxfuzhou.newhouse.fang.com/house/s/b9{}".format(self.num)
-        # self.base_urls = "http://nc.newhouse.fang.com/house/s/b9{}".format(self.num)
+     
     def xinfang_list(self, isTure=True):
         # 获取所有房源
         # name = self.driver.find_elements_by_xpath('//*[@class="clearfix"]/div/a')
@@ -98,20 +92,11 @@ class Dpspider(object):
             # 解析信息
             self.xinfang_list()
             self.num += 1
-            # self.base_urls = "http://nc.newhouse.fang.com/house/s/b9{}".format(self.num)
-            # self.base_urls = "http://jxfuzhou.newhouse.fang.com/house/s/b9{}".format(self.num)
-            # self.base_urls = "http://meizhou.newhouse.fang.com/house/s/b9{}".format(self.num)
-            # self.base_urls = "http://heyuan.newhouse.fang.com/house/s/b9{}".format(self.num)
-            # self.base_urls = "https://tj.newhouse.fang.com/house/s/b9{}/".format(self.num)
-            # self.base_urls = "https://xm.newhouse.fang.com/house/s/b9{}/".format(self.num)
-            # self.base_urls = "https://zz.newhouse.fang.com/house/s/b9{}/".format(self.num)
+       
             self.base_urls = "https://nanjing.newhouse.fang.com/house/s//b9{}/".format(self.num)
             if self.num > 38:
                 break
-        # 点击翻页
-        # next_page.click()
-        # # 隐式等待: 当页面加载完成了或者等待超时了就会结束
-        # self.driver.implicitly_wait(3)
+      
 
 
 if __name__ == '__main__':
